@@ -2,7 +2,7 @@
 
 #pragma once
 
-
+#include "Components/InputComponent.h"
 #include "CoreMinimal.h"
 #include "GameFramework/Pawn.h"
 #include "Tank.generated.h"
@@ -25,8 +25,13 @@ public:
 	UFUNCTION(BlueprintCallable, Category = Setup)
 	void SetTurretReference(UTankTurret* TurretToSet);
 
+	UFUNCTION(BlueprintCallable, Category = Firing)
+	void Fire();
+
 protected:
 	UTankAimingComponent* TankAimingComponent = nullptr;
+
+
 
 private:
 	// Sets default values for this pawn's properties
@@ -41,4 +46,5 @@ private:
 
 	UPROPERTY(EditAnywhere, Category = Firing)
 	float LaunchSpeed = 4000; // Sensible starting value of 1000 m/s
+
 };
