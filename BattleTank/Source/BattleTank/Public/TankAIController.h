@@ -8,7 +8,6 @@
 #include "TankAIController.generated.h"
 
 
-class ATank;
 /**
  * 
  */
@@ -24,5 +23,7 @@ public:
 
 	virtual void BeginPlay() override;
 
+	// How close cam the AI tank get
+	float AcceptanceRadius = 3000;
 
 };
