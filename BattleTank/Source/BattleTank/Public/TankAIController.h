@@ -16,6 +16,10 @@ class BATTLETANK_API ATankAIController : public AAIController
 {
 	GENERATED_BODY()
 	
+protected:
+	// How close cam the AI tank get
+	UPROPERTY(EditDefaultsOnly, Category = "Setup") 
+	float AcceptanceRadius = 3000;
 
 public:
 	// Called every frame
@@ -23,7 +27,6 @@ public:
 
 	virtual void BeginPlay() override;
 
-	// How close cam the AI tank get
-	float AcceptanceRadius = 3000;
+	
 
 };
