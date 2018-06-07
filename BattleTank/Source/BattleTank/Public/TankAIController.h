@@ -25,8 +25,11 @@ public:
 	// Called every frame
 	virtual void Tick(float DeltaTime) override;
 
+	virtual void SetPawn(APawn* InPawn) override;
+
 	virtual void BeginPlay() override;
 
-	
+	UFUNCTION()
+	void OnPossedTankDeath();
 
 };
